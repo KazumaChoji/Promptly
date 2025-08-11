@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg baseProfile="tiny" height="100px" version="1.2" width="400px" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs />
+  <rect x="0" y="0" width="400" height="100" fill="white" stroke="#e2e8f0" stroke-width="1" rx="8"/>
+  <path d="M0,0 L60,30 L0,60 L10,35 L40,30 L10,25 Z" fill="#4F46E5" transform="translate(50, 50) rotate(-45) translate(-30, -30) scale(0.6)" />
+  <text fill="#1f2937" font-family="Arial, sans-serif" font-size="64" font-weight="bold" x="80" y="70">Promptly</text>
+</svg>

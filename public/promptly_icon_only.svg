@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg baseProfile="tiny" height="80px" version="1.2" width="80px" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs />
+  <rect x="0" y="0" width="80" height="80" fill="#4F46E5" rx="12"/>
+  <path d="M0,0 L60,30 L0,60 L10,35 L40,30 L10,25 Z" fill="white" transform="translate(40, 40) rotate(-45) translate(-30, -30) scale(0.8)" />
+</svg>
