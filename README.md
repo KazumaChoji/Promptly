@@ -2,135 +2,66 @@
 
 ![Promptly Logo](public/promptly_horizontal.svg)
 
-**An open-source prompt engineering platform. Create, test, and optimize your system prompts using AI!**
+**An open-source prompt engineering platform for creating and testing system prompts.**
 
-Promptly provides an intuitive interface for prompt engineering workflows with advanced features like multi-provider support, batch testing, visual diff comparison, and AI-powered assistance. It's like Cursor, but for system prompts!
+I got tired of copying prompts between different AI chat interfaces and losing track of what worked. Use Promptly to iterate on your system prompts when building AI agents. Promptly lets you use AI to write prompts, test them across multiple AI models, and actually see what changes when you iterate.
 
----
+## What it does
 
-## ✨ Features
+**Prompt editing** - Write your system prompts.
 
-### 🎯 **Advanced Prompt Engineering**
-- **Agent P System** - Elite prompt design assistant for creating sophisticated system prompts
-- **Visual Diff Viewer** - Compare prompt versions and see changes side-by-side
-- **Right Click AI Assistance** - Get quick intelligent suggestions while crafting prompts by highlighting and right-clicking
+**Multi-model testing** - Run the same prompt against GPT, Claude, or Gemini. See how different models respond to identical inputs.
 
-### 🚀 **Multi-Provider AI Support**
-- **OpenAI Models**: GPT-5, GPT-5 Mini/Nano/Pro/Thinking, o3, o3-mini, o4-mini, GPT-4.1
-- **Anthropic Models**: Claude Opus 4.1, Claude Opus 4, Claude Sonnet 4, Claude 3.5 Sonnet
-- **Google Models**: Gemini 2.5 Pro/Flash/Flash Lite, Gemini 2.0 Flash/Flash Lite, Gemini 1.5 Pro
+**Batch testing** - Set up test cases once, run them repeatedly. Great for checking if your prompt improvements actually do anything.
 
-### 🔬 **Testing & Evaluation**
-- **Batch Testing** - Run multiple test cases simultaneously across different models
-- **Test Case Management** - Organize and reuse test scenarios
+**Version comparison** - Side-by-side diff view so you can see exactly what changed between prompt versions when asking for AI edits (kinda like Cursor's inline red/green system).
 
-### 🔒 **Privacy & Security**
-- **Local-First Architecture** - All data stored in your browser, nothing sent to external servers
-- **Secure API Key Storage** - Keys stored locally, never transmitted or logged
-- **No Telemetry** - Complete privacy with no usage tracking
-- **Open Source** - Full transparency with complete source code available
+**Local storage** - Everything stays in your browser. Your prompts, test results, API keys - none of it gets sent to my servers because I don't wanna pay for servers.
 
----
+**AI assistance** - Highlight and Right-click on text to get quick suggestions for improving your prompts. Just for small improvements.
 
-## 🚀 Quick Start
+## Supported models
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-- API keys from your preferred AI providers
+**OpenAI**: GPT-5, GPT-4.1, o3, o3-mini, o4-mini, plus the various GPT-5 variants
+**Anthropic**: Claude Opus 4.1, Claude Opus 4, Claude Sonnet 4, Claude 3.5 Sonnet  
+**Google**: Gemini 2.5 Pro/Flash, Gemini 2.0 Flash, Gemini 1.5 Pro
 
-### Installation
+## Getting started
+
+You'll need Node.js 18+ and API keys from whichever AI providers you want to use.
 
 ```bash
-# Clone the repository
 git clone https://github.com/KazumaChoji/promptly.git
 cd promptly
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser and start prompt engineering!
+Open http://localhost:3000 and you're good to go.
+
+## API keys
+
+Promptly needs API keys to actually talk to the AI models. Get them from:
+
+- **OpenAI**: [platform.openai.com](https://platform.openai.com/) → API Keys
+- **Anthropic**: [console.anthropic.com](https://console.anthropic.com/) → API Keys  
+- **Google**: [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+
+In Promptly, click the settings gear → API Keys tab → paste your keys. They're stored locally in your browser and never sent anywhere else.
+
+## How to use it
+
+1. **Write a prompt** - Use the editor to write your system prompt. Hit save.
+
+2. **Create test cases** - Make a batch (like "Customer Service") and add test cases with different user inputs you want to try.
+
+3. **Run tests** - Pick your models and hit "Run Test." Watch the responses come in.
+
+
+## Built with
+
+Next.js 14, React 18, TypeScript, CodeMirror for the editor, Zustand for state, Tailwind + Radix UI for the interface. Material-UI and Framer Motion too.
 
 ---
 
-## 🔑 API Key Setup
-
-Promptly requires API keys from AI providers to function. These are stored securely in your browser's local storage.
-
-### Getting API Keys
-
-#### OpenAI
-1. Visit [OpenAI Platform](https://platform.openai.com/)
-2. Sign in and navigate to API Keys
-3. Create a new secret key
-4. Copy the key (starts with `sk-`)
-
-#### Anthropic
-1. Visit [Anthropic Console](https://console.anthropic.com/)
-2. Sign in and go to API Keys
-3. Create a new key
-4. Copy the key (starts with `sk-ant-`)
-
-#### Google (Gemini)
-1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
-2. Sign in with your Google account
-3. Create a new API key
-4. Copy the key (starts with `AIza`)
-
-### Adding Keys to Promptly
-
-1. Open Promptly in your browser
-2. Navigate to **Settings** (gear icon in top bar)
-3. Go to the **API Keys** tab
-4. Paste your keys into the respective fields
-5. Click **Save Changes**
-
-Your keys are encrypted and stored locally - they never leave your browser.
-
----
-
-## 📖 Usage Guide
-
-### Basic Prompt Testing
-
-1. **Create a Prompt**
-   - Open the Studio interface
-   - Write your system prompt in the main editor
-   - Make sure to click the "save" button next to your file name in the file explorer!
-
-2. **Test Your Prompt**
-   - Create a batch, and form test cases within each batch (e.g. a Customer Service batch with different customer service request test cases)
-   - Select your preferred AI model and provider
-   - Click "Run Test" to see results
-
-3. **Iterate and improve**
-   - Run the same prompt across different models
-   - Iterate on your system prompts to improve performance
-
----
-
-## 🛠 Development
-
-### Tech Stack
-
-- **Frontend**: Next.js 14, React 18, TypeScript
-- **UI Components**: Radix UI primitives with Tailwind CSS
-- **Code Editor**: Monaco Editor (VS Code engine)
-- **State Management**: Zustand
-- **Storage**: Browser localStorage (local-first)
-- **AI Integration**: Direct API calls to OpenAI, Anthropic, Google
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-
-**Happy prompt engineering! Star this repo if this was useful!**
-</div>
+If this helps with your prompt engineering workflow, please star the repo!
